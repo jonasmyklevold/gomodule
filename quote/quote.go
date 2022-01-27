@@ -1,14 +1,14 @@
-package gomodule
+package quote
 
 import "fmt"
 import "rsc.io/quote"
 
-func gomodule() {
+func main() {
 	fmt.Println(getGlass())
 }
 
 func getGlass() string {
-	fmt.Println(quote.Glass())
+	return quote.Glass()
 }
 
 func getGo() string {
