@@ -1,17 +1,24 @@
 package gomodule
 
 import "fmt"
+import "rsc.io/quote"
 
-import (
-"fmt"
+func gomodule() {
+	fmt.Println(getGlass())
+}
 
-"rsc.io/quote"
-)
+func getGlass() string {
+	fmt.Println(quote.Glass())
+}
 
-func myquote() {
-	fmt.Println(quote.go())
-	fmt.Println(quote.hello())
-	fmt.Println(quote.glass())
-	fmt.Println(quote.opt())
+func getGo() string {
+	return quote.Go()
+}
 
+func getHello() string {
+	return getHello()
+}
+
+func getOpt() string {
+	return quote.Go()
 }
