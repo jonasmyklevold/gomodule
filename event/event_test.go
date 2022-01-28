@@ -1,15 +1,16 @@
-// Package for testing events in the riverworld
-// Possible events: put(item), getin(), getout(), crossriver(), takeout(item)
-// start() or setup(), reset() osv.
 package event
 
-import "testing"
+import (
+	"testing"
+)
 
-func TestPut(t *testing.T) {
-	// Hva forventer jeg?
-	wanted := "[kylling rev korn ---\\ \\_korn_/ _________________/---]"
-	got := Put("korn") // Hva fikk jeg?
+// Test som tester funksjonen PutAllB
+func TestKyoHsB(t *testing.T) {
+	wanted := "Sts Korn:true | Sts Rev:true | Sts Ky:false  | Sts Hs:false "
+	got := BoatInfo
 	if got != wanted {
-		t.Errorf("Feil, fikk %q, ønsket %q.", got, wanted)
+		t.Errorf("Feil, fikk %q, ønsket %q. Enter er det ingen i båten, for mange i båten eller Mennesket mangler", got, wanted)
+	} else {
+		t.Log("Korn og Rev er i båten")
 	}
 }
